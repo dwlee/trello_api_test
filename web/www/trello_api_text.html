@@ -1,0 +1,99 @@
+<html>
+<head>
+  <!-- ...  -->
+
+  <!-- The client library requires jQuery  -->
+  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="https://api.trello.com/1/client.js?key=cd0f18922b9eb5085356874cb7a12b69"></script>
+  
+  <script src="js/trello_api.js"></script>
+  
+  
+  <style type="text/css">
+    body {
+        font-family: arial;
+        font-size: 12px;
+    }
+
+    #loggedout {
+        text-align: center;
+        font-size: 20px;
+        padding-top: 30px;
+    }
+    #loggedin { 
+        display: none; 
+    }
+
+    #header {
+        padding: 4px;
+        border-bottom: 1px solid #000;
+        background: #eee;
+    }
+
+    #output {
+        padding: 4px;
+    }
+
+    .card { 
+        display: block; 
+        padding: 2px;
+    }
+  </style>
+  <!-- ...  -->
+</head>
+<body>
+
+<div id="main" style="margin: 0 auto;">
+	<div id=sub_1 style=" float:left;">
+		<div id="loggedout">
+		    <a id="connectLink" href="#">Connect To Trello</a>
+		</div>
+		
+		<div id="loggedin">
+		    <div id="header">
+		        Logged in to as <span id="fullName"></span> 
+		        <a id="disconnect" href="#">Log Out</a>
+		    </div>
+		    
+		    <div id="output"></div>
+		</div>
+	</div>
+	
+	
+	<div id= test_area style="float:left;">
+		<h2>Get Member: </h2><button id="get_member" href="#">Get Member</button></br>
+		
+		<h2>Get Tokens: </h2><button id="get_tokens" href="#">Get Tokens</button></br>
+		
+		<h2>Get Board ID: </h2><input id="board_id" href="#"></input>
+		<button id="get_board_info" href="#">Get Board Info</button></br>
+		
+		<h2>Get Member ID: </h2><input id="member_id" href="#"></input>
+		<button id="get_member_info" href="#">Get Member Info</button></br>
+			
+		<h2>Get Token ID: </h2><input id="token_id" href="#"></input>
+		<button id="get_token_info" href="#">Get Token Info</button></br>
+		
+		<h2>Get Token: </h2><button id="get_token" href="#">Get Token</button></br>
+		
+		<h2>WebHook: </h2>
+		Token: <input id="token" href="#"></input></br>
+		URL: <input id="url" href="#"></input></br>
+		WebHookId: <input id="webhook_id" href="#"></input></br>
+		
+		<button id="get_webhook" href="#">Get WebHook</button>
+		<button id="register_webhook" href="#">Register WebHook</button>
+		<button id="delete_webhook" href="#">Delete WebHook</button>	
+		
+		<h2>Test :</h2> <input id="test_id" href="#"></input>
+		<button id="test" href="#">test</button></br>
+
+	</div> 
+	<div id = log_area style="width:33%; float:left;">
+		<h2>Here is test result area!!</h2>
+		<p id=test_log ></p>	
+	</div>
+</div>
+
+</body>
+</html>
